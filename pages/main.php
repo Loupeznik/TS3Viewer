@@ -9,7 +9,7 @@
         <?php
             if ($serverstatus == 1) print '<b>' . $status['active'] . '</b>'; else print '<b>' . $status['inactive'] . '</b>';
             print '<br> Počet připojených klientů: ';
-            if($serverstatus == 0) print '<b>0/0</b>'; else print $ts3_VirtualServer["virtualserver_clientsonline"]-$ts3_VirtualServer["virtualserver_queryclientsonline"] . '/' . $maxclients;
+            if($serverstatus == 0) print '<b>0/0</b>'; else print $ts3_VirtualServer["virtualserver_clientsonline"]-$ts3_VirtualServer["virtualserver_queryclientsonline"] . '/' . $ts3_VirtualServer["virtualserver_maxclients"];
         ?>
     </p>
   </div>

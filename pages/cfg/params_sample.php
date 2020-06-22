@@ -22,7 +22,6 @@ $status = ['active' => 'Aktivní', 'inactive' => 'Neaktivní']; //server status
 $apiLibPath = "api/lib/TeamSpeak3/TeamSpeak3.php"; //path to the TeamSpeak 3 PHP Framework api (https://docs.planetteamspeak.com/ts3/php/framework/)
 $serverqueryLogin = "yourserverquerylogin";
 $serverqueryPw = "yourserverquerypassword";
-$maxclients = '64'; //max 
 
 //FUNCTIONS
 
