@@ -3,7 +3,7 @@ require_once("pages/cfg/bot.php");
 require_once("pages/cfg/params.php");
 require_once($apiLibPath);
 try {
-    $ts3_VirtualServer = TeamSpeak3::factory("serverquery://script:nYtnBd80@127.0.0.1:10011/?server_port=9987");
+    $ts3_VirtualServer = TeamSpeak3::factory("serverquery://$serverqueryLogin:$serverqueryPw@127.0.0.1:10011/?server_port=9987");
     $serverstatus = 1;
 } catch (Exception $e) {
     $serverstatus = 0;
