@@ -1,0 +1,9 @@
+#dirs
+api/
+music/
+upload_temp/
+
+#files
+test.php
+pages/cfg/params.php
+pages/cfg/bot.php
