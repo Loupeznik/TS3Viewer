@@ -23,6 +23,9 @@ $apiLibPath = "api/lib/TeamSpeak3/TeamSpeak3.php"; //path to the TeamSpeak 3 PHP
 $serverqueryLogin = "yourserverquerylogin";
 $serverqueryPw = "yourserverquerypassword";
 
+$audiobotFullPath = "/opt/teamspeak/musicbot/music/";
+$serverPublicIP = "8.8.8.8";
+
 //FUNCTIONS
 
 class Func {

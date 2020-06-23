@@ -36,10 +36,10 @@
             <p class="label">Vložit YouTube link pro přehrání botem</p>
             <div class="field has-addons">
               <div class="control">
-              <input class="input is-rounded" type="text" type="text" placeholder="https://youtube.com/xx1337link" name="ytlink">
+              <input class="input is-rounded" type="text" placeholder="https://youtube.com/xx1337link" name="ytLink">
               </div>
               <div class="control">
-              <button type="submit" class="button is-link" name="submit" title="Zatím není k dispozici" disabled>Přehrát</button>
+              <input type="submit" class="button is-link" name="ytPlay" value="Přehrát">
               </div>
             </div>
           </form>
@@ -56,9 +56,9 @@
         </thead>
         <tbody>
             <?php 
-                exec('ls /home/teamspeak/jihadbox/music/',$arr);
+                exec('ls ' . $audiobotFullPath,$arr);
                 foreach ($arr as $item) {
-                    print '<tr><th>' . $item . '<span class="icon"><a href="index.php?strana=main&play=' . $item . '"><i class="far fa-play-circle"></i></a></span></th><td>-</td></tr>';
+                    print '<tr><th>' . $item . '<span class="icon"><a href="index.php?page=main&play=' . $item . '"><i class="far fa-play-circle"></i></a></span></th><td>-</td></tr>';
                 }
             ?>
         </tbody>
@@ -70,4 +70,5 @@ if ($_GET['play']) $bot->command('play',$_GET['play']);
 if ($_GET['stop']) $bot->command('stop','0');
 if ($_GET['pause']) $bot->command('pause','0');
 if ($_GET['unpause']) $bot->command('play','0');
+if ($_POST['ytPlay']) $bot->command('play',$_POST['ytLink']);
 ?>
