@@ -3,8 +3,8 @@
     <form method="POST" enctype="multipart/form-data">
         <div class="field">
             <div class="control">
-            <label class="label">Název souboru</label>
-            <input class="input is-rounded" type="text" name="filename" placeholder="Jak se bude soubor jmenovat">
+            <label class="label">Filename</label>
+            <input class="input is-rounded" type="text" name="filename" placeholder="Filename for storing on the server">
             </div>
         </div>
         <div class="field">
@@ -22,7 +22,7 @@
                     <i class="fas fa-cloud-upload-alt"></i>
                     </span>
                     <span class="file-label">
-                    Zvolit soubor
+                    Select file
                     </span>
                 </span>
                 </label>
@@ -48,15 +48,15 @@ if ($_POST['submit']) {
                 $finfo = finfo_open(FILEINFO_MIME_TYPE);
                 if(finfo_file($finfo, $filename) == 'audio/mpeg') {
                     exec('./move.sh ' . $file_only); //přidat hledání esi už soubor existuje
-                    print 'Soubor úspěšně nahrán';
+                    print 'File was successfully uploaded';
                 } else {
                     unlink($filename); //smazat
-                    print '<b>Soubor neprošel kontrolou, mažu</b>';
+                    print '<b>File did not pass the checks, try again with another file</b>';
                 }
                 finfo_close($finfo);
-            } else print 'Nepodařilo se nahrát soubor';
+            } else print 'Upload failed';
         } else {
-            print 'Soubor je příliš velký, maximální velikost je <i>8MB</i>';
+            print 'File is too large, filesize cannot exceed <i>8MB</i>';
         }
 
 }

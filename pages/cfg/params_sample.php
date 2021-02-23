@@ -5,16 +5,16 @@
 $pageTitle = "TS3Server Dashboard"; //html head title
 $serverName = "Some server"; //hero title text
 $pageLinks = ['main', 'upload', 'connect', 'status', 'cmds']; //links correspond with filenames inside pages/ directory
-$menuOptions = [$pageLinks[0] => 'Main page', 
-                $pageLinks[1] => 'Song upload', 
-                $pageLinks[2] => 'Connect to the server', 
-                $pageLinks[3] => 'Server status', 
+$menuOptions = [$pageLinks[0] => 'Main page',
+                $pageLinks[1] => 'Song upload',
+                $pageLinks[2] => 'Connect to the server',
+                $pageLinks[3] => 'Server status',
                 $pageLinks[4] => 'Commands'
             ]; //menu item names
-$pageHeaders = [$pageLinks[0] => 'Current server and bot status', 
-                $pageLinks[1] => 'Music upload', 
-                $pageLinks[2] => 'Server connection dialog', 
-                $pageLinks[3] => 'Detailed server status', 
+$pageHeaders = [$pageLinks[0] => 'Current server and bot status',
+                $pageLinks[1] => 'Music upload',
+                $pageLinks[2] => 'Server connection dialog',
+                $pageLinks[3] => 'Detailed server status',
                 $pageLinks[4] => 'AudioBot commands'
             ]; //title of each page
 $status = ['active' => 'Active', 'inactive' => 'Inactive']; //server status
@@ -23,13 +23,13 @@ $apiLibPath = "api/lib/TeamSpeak3/TeamSpeak3.php"; //path to the TeamSpeak 3 PHP
 $serverqueryLogin = "yourserverquerylogin";
 $serverqueryPw = "yourserverquerypassword";
 
-$audiobotFullPath = "/opt/teamspeak/musicbot/music/";
+$audiobotFullPath = "/home/teamspeak/ts3audiobot/music/"; //path as per my install script at https://github.com/Loupeznik/utils/blob/master/setup_utils/ts3server-setup.sh
 $serverPublicIP = "8.8.8.8";
 
 //FUNCTIONS
 
 class Func {
     public function alert($text,$type) {
-        
+
     }
 }

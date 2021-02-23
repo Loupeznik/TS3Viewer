@@ -12,7 +12,7 @@ print $ts3_VirtualServer->getViewer(new TeamSpeak3_Viewer_Html());
             function() {
                 setInterval(function(){
                 $('#refreshText').addClass('tag is-dark is-medium');
-                $('#refreshText').text('Refrešuju status za: ' + interval);
+                $('#refreshText').text('Refreshing in: ' + interval);
                 interval--;
                 if(interval <= 0){ interval = 60; }
                 }, 1000);

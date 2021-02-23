@@ -23,9 +23,9 @@ class Bot {
         try {
             curl_exec($ch);
         } catch (Exception $e) {
-            print 'Něco se posralo';
+            print 'An error has occured';
         }
-        
+
         curl_close($ch);
     }
 
@@ -34,15 +34,14 @@ class Bot {
         curl_setopt($ch, CURLOPT_URL, "http://127.0.0.1:58913/api/bot/use/0(/song");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             try {
-                $final = curl_exec($ch); 
+                $final = curl_exec($ch);
                 $json = json_decode($final,true);
-                if ($json['Title']) print $json['Title']; else print 'Bot právě nic nehraje';
+                if ($json['Title']) print $json['Title']; else print 'Bot is inactive';
             } catch (Exception $e) {
-                print 'Něco se posralo';
+                print 'An error has occured';
             }
-            
+
             curl_close($ch);
     }
 
 }
-

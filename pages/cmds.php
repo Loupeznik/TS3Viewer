@@ -1,33 +1,33 @@
 <h1 class="title"><?php print $pageHeaders['cmds']; ?></h1>
-<p>Používá se zasláním zprávy do kanela či botovi přímo, musíte mít server grupu <i>Može hrac boxu</i></p>
+<p>List of TS3AudioBot commands</p>
 <table class="table is-hoverable is-fullwidth">
         <thead>
             <tr>
                 <th>Command</th>
                 <th>Syntax</th>
-                <th>Účel</th>
+                <th>For</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <th>!play</th>
-                <td>!play název lokální songy || odkaz na youtube</td>
-                <td>Zahraje vybraný song</td>
+                <td>!play local song name || youtube link</td>
+                <td>Play a song</td>
             </tr>
             <tr>
                 <th>!song</th>
                 <td>!song</td>
-                <td>Vypíše aktuální song</td>
+                <td>Get currently playing song</td>
             </tr>
             <tr>
                 <th>!volume</th>
                 <td>!volume 0-100</td>
-                <td>Změní hlasitost bota</td>
+                <td>Change bot's volume</td>
             </tr>
             <tr>
                 <th>!yt</th>
                 <td>!yt text</td>
-                <td>Vyhledá zadaný text na youtube a vrátí výsledky, ze kterých je pak možno vybrat song k přehrání</td>
+                <td>Searches youtube for given keyword and returns the results</td>
             </tr>
         </tbody>
     </table>
