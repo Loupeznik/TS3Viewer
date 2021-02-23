@@ -16,7 +16,7 @@ $utility = new Func();
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta author="Dominik Zarsky">
+    <meta author="Dominik Zarsky (https://github.com/Loupeznik)">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php print $pageTitle; ?></title>
     <!-- FRAMEWORK -->
@@ -56,8 +56,8 @@ $utility = new Func();
                     if (!isset($_GET['page'])) {
                       $_GET['page'] = 'main';
                     }
-            
-                    if (file_exists('pages/' . $_GET['page'] . '.php')) { 
+
+                    if (file_exists('pages/' . $_GET['page'] . '.php')) {
                       include  'pages/' . $_GET['page'] . '.php';
                     } else {
                       print '
@@ -65,7 +65,7 @@ $utility = new Func();
                             <div class="notification has-background-danger has-text-black has-text-centered has-text-weight-bold">
                             <span class="icon has-text-warning">
                                 <i class="fas fa-exclamation-triangle"></i>
-                            </span>    
+                            </span>
                             <p>Page not found</p>
                             </div>
                         </div>
@@ -76,10 +76,8 @@ $utility = new Func();
     </div>
     <footer class="footer">
         <div class="content has-text-centered">
-            ©2020, Loupeznik <br>
-            <a href="https://bulma.io" target="_blank">
-            <img src="https://bulma.io/images/made-with-bulma--semiblack.png" alt="Made with Bulma" width="128">
-            </a>
+            ©2020 - 2021, Loupeznik <br>
+            TS3Viewer is MIT licensed, original source code may be found at <a href="https://github.com/Loupeznik/ts3viewer-php">GitHub</a>
         </div>
     </footer>
 </body>
