@@ -1,4 +1,4 @@
-<h1 class="title"><?php print $pageHeaders['connect']; ?></h1>
+<h1 class="title"><?php print $server->links['connect']['page_title']; ?></h1>
 <form method="POST">
     <p class="label">Connect to the TeamSpeak server</p>
     <div class="field has-addons">
@@ -12,8 +12,5 @@
 </form>
 
 <?php
-if ($_POST['connect']) {
-    $name = $_POST['username'];
-    print "<script type='text/javascript'>window.location.href='ts3server://$serverPublicIP/?port=9987&nickname=$name'</script>";
-}
+if ($_POST['connect']) $server->connect($_POST['username']);
 ?>
