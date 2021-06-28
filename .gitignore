@@ -2,8 +2,8 @@
 api/
 music/
 upload_temp/
+vendor/
 
 #files
 test.php
-pages/cfg/params.php
-pages/cfg/bot.php
+.env.yml
