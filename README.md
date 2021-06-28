@@ -23,6 +23,13 @@ cp .env.example.yml .env.yml
 
 Fill your server information and other options in .env.yml and set correct permissions to move.sh according to the commented text inside it.
 
+If Server Status images are not working, fix it by copying the images from TS3 PHP Framework into the root directory. This is a problem due to
+the library having paths for the server viewer object messed up somehow.
+
+```
+cp -r vendor/planetteamspeak/ts3-php-framework/images .
+```
+
 ## Functions
 * Complete server status with periodical refresh as well as minified server status on the main page
 * TS3AudioBot playback controls
@@ -34,3 +41,4 @@ Fill your server information and other options in .env.yml and set correct permi
 * Server admin section
 * Better AudioBot API interaction
 * Improved server viewer
+* Parametrized / Database-stored audiobot command list

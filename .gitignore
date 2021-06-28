@@ -3,6 +3,7 @@ api/
 music/
 upload_temp/
 vendor/
+images/
 
 #files
 test.php
