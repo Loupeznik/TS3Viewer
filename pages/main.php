@@ -39,7 +39,7 @@
               <input class="input is-rounded" type="text" placeholder="https://youtube.com/xx1337link" name="ytLink">
               </div>
               <div class="control">
-              <input type="submit" class="button is-link" name="ytPlay" value="Přehrát">
+              <input type="submit" class="button is-link" name="ytPlay" value="Play">
               </div>
             </div>
           </form>

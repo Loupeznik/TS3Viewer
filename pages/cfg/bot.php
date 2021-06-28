@@ -6,9 +6,9 @@ class Bot {
 
     private $env;
 
-    private function __construct()
+    public function __construct()
     {
-        $this->env = Yaml::parseFile('/.env.yml');
+        $this->env = Yaml::parseFile(__DIR__ . '/../../.env.yml');
     }
 
     private function init() {
