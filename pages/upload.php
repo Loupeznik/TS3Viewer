@@ -1,4 +1,4 @@
-<h1 class="title"><?php print $pageHeaders['upload']; ?></h1>
+<h1 class="title"><?php print $server->links['upload']['page_title']; ?></h1>
 <div class="container">
     <form method="POST" enctype="multipart/form-data">
         <div class="field">
@@ -38,8 +38,6 @@
 
 <?php
 if ($_POST['submit']) {
-    //čeknout filename že je to fakt mp3
-    //osekat mezery a spec. znaky
     $filename = 'upload_temp/' . $_POST['filename'] . '.mp3';
     $file_only = $_POST['filename'] . '.mp3';
     $filesize = $_FILES['file']['size'];
@@ -47,10 +45,10 @@ if ($_POST['submit']) {
             if (move_uploaded_file($_FILES['file']['tmp_name'], $filename)) {
                 $finfo = finfo_open(FILEINFO_MIME_TYPE);
                 if(finfo_file($finfo, $filename) == 'audio/mpeg') {
-                    exec('./move.sh ' . $file_only); //přidat hledání esi už soubor existuje
+                    exec('./move.sh ' . $file_only);
                     print 'File was successfully uploaded';
                 } else {
-                    unlink($filename); //smazat
+                    unlink($filename);
                     print '<b>File did not pass the checks, try again with another file</b>';
                 }
                 finfo_close($finfo);

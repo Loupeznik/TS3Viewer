@@ -1,0 +1,6 @@
+{
+    "require": {
+        "planetteamspeak/ts3-php-framework": "^1.1",
+        "symfony/yaml": "^5.3"
+    }
+}

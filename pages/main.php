@@ -1,4 +1,4 @@
-<h1 class="title"><?php print $pageHeaders['main']; ?></h1>
+<h1 class="title"><?php print $server->links['main']['page_title']; ?></h1>
 <article class="message is-dark">
   <div class="message-header">
     <p>Current server status</p>
@@ -7,9 +7,9 @@
     <p class="is-size-5 has-text-centered is-uppercase has-text-weight-semibold">
         Status:
         <?php
-            if ($serverstatus == 1) print '<b>' . $status['active'] . '</b>'; else print '<b>' . $status['inactive'] . '</b>';
+            if ($server->serverStatus == 1) print '<b>ACTIVE</b>'; else print '<b>INACTIVE</b>';
             print '<br> Number of connected clients: ';
-            if($serverstatus == 0) print '<b>0/0</b>'; else print $ts3_VirtualServer["virtualserver_clientsonline"]-$ts3_VirtualServer["virtualserver_queryclientsonline"] . '/' . $ts3_VirtualServer["virtualserver_maxclients"];
+            if($server->serverStatus == 0) print '<b>0/0</b>'; else print $server->virtualServer["virtualserver_clientsonline"]-$server->virtualServer["virtualserver_queryclientsonline"] . '/' . $server->virtualServer["virtualserver_maxclients"];
         ?>
     </p>
   </div>
@@ -39,7 +39,7 @@
               <input class="input is-rounded" type="text" placeholder="https://youtube.com/xx1337link" name="ytLink">
               </div>
               <div class="control">
-              <input type="submit" class="button is-link" name="ytPlay" value="Přehrát">
+              <input type="submit" class="button is-link" name="ytPlay" value="Play">
               </div>
             </div>
           </form>
@@ -56,7 +56,7 @@
         </thead>
         <tbody>
             <?php
-                exec('ls ' . $audiobotFullPath,$arr);
+                exec('ls ' . $server->audiobotPath, $arr);
                 foreach ($arr as $item) {
                     print '<tr><th>' . $item . '<span class="icon"><a href="index.php?page=main&play=' . $item . '"><i class="far fa-play-circle"></i></a></span></th><td>-</td></tr>';
                 }
@@ -65,6 +65,7 @@
     </table>
   </div>
 </article>
+
 <?php
 if ($_GET['play']) $bot->command('play',$_GET['play']);
 if ($_GET['stop']) $bot->command('stop','0');

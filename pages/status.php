@@ -1,7 +1,7 @@
-<h1 class="title"><?php print $pageHeaders['status']; ?></h1>
+<h1 class="title"><?php print $server->links['status']['page_title']; ?></h1>
 <div class="container" id="viewerContainer">
 <?php
-print $ts3_VirtualServer->getViewer(new TeamSpeak3_Viewer_Html());
+print $server->virtualServer->getViewer(new TeamSpeak3_Viewer_Html());
 ?>
 <p id="refreshText"><progress class="progress is-medium is-dark" max="100"></progress></p>
 </div>
