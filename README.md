@@ -21,9 +21,12 @@ composer install
 cp .env.example.yml .env.yml
 ```
 
-Fill your server information and other options in .env.yml and set correct permissions to move.sh according to the commented text inside it.
+Fill your server information and other options in .env.yml and set correct permissions to move.sh (the process is explained within the script).
 
-If Server Status images are not working, fix it by copying the images from TS3 PHP Framework into the root directory. This is a problem due to
+**WARNING**: The bot's API key or the TeamSpeak3 user who requested it need to have permissions to control the bot (mainly its playback functions).
+If these permissions are missing, refer to the [bot's documentation](https://github.com/Splamy/TS3AudioBot/wiki/Rights) for setting up these permissions.
+
+If Server Status images are not working, you can fix it by copying the images from TS3 PHP Framework into the root directory. This is a problem due to
 the library having paths for the server viewer object messed up somehow.
 
 ```
