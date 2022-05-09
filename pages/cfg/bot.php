@@ -8,7 +8,14 @@ class Bot {
 
     public function __construct()
     {
-        $this->env = Yaml::parseFile(__DIR__ . '/../../.env.yml');
+        if (file_exists('/.dockerfile'))
+        {
+            $this->env = Yaml::parseFile($_SERVER["DOCUMENT_ROOT"] . '/.env.yml');
+        }
+        else 
+        {
+            $this->env = Yaml::parseFile(__DIR__ . '/../../.env.yml');
+        }
     }
 
     private function init() {
