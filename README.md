@@ -1,6 +1,9 @@
 # TS3Viewer
 Simple dashboard which displays TS3 server info and partially controls an instance of TS3AudioBot.
 
+# NOTICE
+This project is no longer in development. A newer version written in React and .NET 6 can be found in [this repo](https://github.com/Loupeznik/ts3viewer2).
+
 ## Dependencies
 * PHP7
 * Composer
